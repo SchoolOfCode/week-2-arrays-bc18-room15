@@ -35,3 +35,51 @@ for (let i = 0 ; i < cookiesOrdered.length; i++) {
 };
 
 console.log(cookiesOrdered);
+
+//Final Ticket - REAL-WORLD EXAMPLE: AUTOMATED QUIZ SYSTEM
+
+//Create an array to store questions and answers.
+//Initialise score to 0
+// Initialise correctAnswers to 0
+
+const mathQuestionsAndAnswers = [{
+    question: "What is 5 + 7?",
+    answer: 12
+},
+{
+    question: "What is the square root of 81?",
+    answer: 9
+},
+{
+    question: "What is 15 divided by 3?",
+    answer: 5
+},
+{
+    question: "What is the value of 2 to the power of 4?",
+    answer: 16
+},
+{
+    question: "What is 9 multiplied by 6?",
+    answer: 54
+}
+];
+
+console.log(mathQuestionsAndAnswers);
+
+let score = 0;
+let correctAnswers = 0;
+
+//loop through the mathQuestionsAndAnswers.
+
+for (let i = 0; i < mathQuestionsAndAnswers.length; i++) {
+    const userAnswer = Number(prompt(`Question ${i + 1}: ${mathQuestionsAndAnswers[i].question}`));
+    if (userAnswer === mathQuestionsAndAnswers[i].answer) {
+        alert("Well Done!");
+        score++;
+        correctAnswers++;
+    } else {
+        alert("Wrong Answer!");
+    };
+}
+
+alert(`You scored ${correctAnswers} out of ${mathQuestionsAndAnswers.length}`);
